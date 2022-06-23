@@ -17,7 +17,7 @@ export default function Crud() {
     if (userNme.length > 0 && userAg.length > 0) {
       try {
         const response = await axios.post(
-          "https://crudmycrud.herokuapp.com//insertItems",
+          "https://crudmycrud.herokuapp.com/insertItems",
           { withCredentials: false },
           {
             name: userNme,
