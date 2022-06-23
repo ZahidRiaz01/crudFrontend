@@ -36,6 +36,7 @@ export default function Crud() {
         console.log("Error while posting data from front end");
         toast.error("Adding Data Failed");
       }
+      //adding faltu comment
     } else {
       toast.info("Fields cannot be empty");
     }
