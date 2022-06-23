@@ -1,0 +1,37 @@
+.ipTags1{
+    /* width: 300px; */
+    /* margin-left: 10px; */
+    /* margin-top: 0.3rem; */
+    /* height: 200 px; */
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 10px;
+    /* border: 3px solid rgb(214, 12, 12); */
+}
+.mainContainor{
+    background-image: url("../../../public/bg1.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    border: none;
+
+}
+.tableContaner{
+    background-color: rgb(180, 166, 145) !important;
+    min-height: 300px;
+    border-radius: 20px;
+    padding: 20px 40px;
+    border: none;
+    min-width: 500px;
+    /* margin-top: 5rem; */
+}
+.modalBg{
+    background-color: rgb(180, 166, 145) !important;
+    /* min-height: 300px; */
+    /* border-radius: 20px; */
+    padding: 20px 40px;
+    border: none;
+    min-width: 500px;
+}
