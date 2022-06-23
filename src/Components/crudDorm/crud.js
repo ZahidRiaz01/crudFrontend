@@ -14,22 +14,30 @@ export default function Crud() {
   const addDataToDataBase = async () => {
     let userNme = userEnteredName.current.value;
     let userAg = userEnteredAge.current.value;
-    try {
-      const response = await axios.post("https://glacial-gorge-06787.herokuapp.com/insertItems", {
-        name: userNme,
-        age: userAg,
-      });
-      // .then(function (response) {
-      //   console.log("RESPONSE", response.request.body);
-      // })
-      // .catch((e) => {
-      //   console.log("RESPONSE error", e);
-      // });
-      toast.success("Added Data Successfully");
-      console.log("Posted data ", response);
-    } catch (e) {
-      console.log("Error while posting data from front end");
-      toast.error("Adding Data Failed");
+    if (userNme.length > 0 && userAg.length > 0) {
+      try {
+        const response = await axios.post(
+          "https://crudmycrud.herokuapp.com//insertItems",
+          { withCredentials: false },
+          {
+            name: userNme,
+            age: userAg,
+          }
+        );
+        // .then(function (response) {
+        //   console.log("RESPONSE", response.request.body);
+        // })
+        // .catch((e) => {
+        //   console.log("RESPONSE error", e);
+        // });
+        toast.success("Added Data Successfully");
+        console.log("Posted data ", response);
+      } catch (e) {
+        console.log("Error while posting data from front end");
+        toast.error("Adding Data Failed");
+      }
+    } else {
+      toast.info("Fields cannot be empty");
     }
   };
   return (

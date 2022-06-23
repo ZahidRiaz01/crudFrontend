@@ -17,9 +17,7 @@ export default function MyTables() {
   let userEnteredAge = useRef();
   const getDataFromDb = async () => {
     try {
-      let apiData = await axios.get(
-        "https://glacial-gorge-06787.herokuapp.com/read"
-      );
+      let apiData = await axios.get(" https://crudmycrud.herokuapp.com/read");
       apiData = apiData.data;
       //   console.log("Api Data", apiData);
       // dummyArray = [...dummyArray, apiData];
@@ -33,7 +31,7 @@ export default function MyTables() {
     console.log("Id to be udated is ", updateId);
     try {
       const res = await axios.get(
-        `https://glacial-gorge-06787.herokuapp.com/readone/${id}`
+        `https://crudmycrud.herokuapp.com/readone/${id}`
       );
       console.log("res = =", res);
       let data = res.data;
@@ -52,7 +50,7 @@ export default function MyTables() {
     console.log("ID is ", id);
     try {
       let del = await axios.delete(
-        `https://glacial-gorge-06787.herokuapp.com/delete/${id}`
+        `https://crudmycrud.herokuapp.com/delete/${id}`
       );
       console.log(" Deleted Succeffuly", del);
       toast.success("Deleted Successfully");
@@ -70,7 +68,7 @@ export default function MyTables() {
     let userAg = userEnteredAge.current.value;
     try {
       const response = await axios.put(
-        "https://glacial-gorge-06787.herokuapp.com/update",
+        "https://crudmycrud.herokuapp.com/update",
         {
           id: updateId,
           updatedUserName: userNme,
