@@ -18,7 +18,6 @@ export default function Crud() {
       try {
         const response = await axios.post(
           "https://crudmycrud.herokuapp.com/insertItems",
-          { withCredentials: false },
           {
             name: userNme,
             age: userAg,
