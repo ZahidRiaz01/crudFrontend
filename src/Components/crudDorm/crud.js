@@ -32,7 +32,7 @@ export default function Crud() {
         toast.success("Added Data Successfully");
         console.log("Posted data ", response);
       } catch (e) {
-        console.log("Error while posting data from front end");
+        console.log("Error while posting data from front end", e);
         toast.error("Adding Data Failed");
       }
       //adding faltu comment
